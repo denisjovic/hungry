@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import Pages from './pages/Pages';
+import Cuisine from './pages/Cuisine';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className='App'>
-      <Pages />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/cuisine/:cuisine' element={<Cuisine />} />
+        <Route path='/' element={<Pages />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -40,8 +40,8 @@ export const Vegetarian = () => {
         }}
       >
         {vegetarian.map((recipe) => (
-          <SplideSlide>
-            <Card key={recipe.id}>
+          <SplideSlide key={recipe.id}>
+            <Card>
               <p>{recipe.title}</p>
               <img src={recipe.image} alt={recipe.title} />
               <Gradient />
@@ -78,7 +78,7 @@ const Card = styled.div`
     transform: translate(-50%, 0);
     color: white;
     width: 100%;
-    height: 20%;
+    height: 40%;
     text-align: center;
     font-size: .8rem
     display: flex;
