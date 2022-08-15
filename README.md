@@ -1,11 +1,7 @@
 # Hungry
 
 Recipes from different cuisines.
-App is using spoonacular API. Filtering by name. See detailed recipe with ingredients and step by step insturcions.
-
-## install and run
-
-git cl
+App is using spoonacular API. Filtering by name. See detailed recipe with ingredients and step by step instructions.
 
 ## Installation
 
