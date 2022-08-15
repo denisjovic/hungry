@@ -1,12 +1,17 @@
 import React from 'react';
-import { Categories } from '../components/Categories';
 import Home from './Home';
+import Cuisine from './Cuisine';
+import { Searched } from './Searched';
+import { Recipe } from './Recipe';
+import { Route, Routes } from 'react-router-dom';
 
 export default function Pages() {
   return (
-    <>
-      <Categories />
-      <Home />
-    </>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/cuisine/:cuisine' element={<Cuisine />} />
+      <Route path='/searched/:searchTerm' element={<Searched />} />
+      <Route path='/recipe/:recipeId' element={<Recipe />} />
+    </Routes>
   );
 }
