@@ -24,7 +24,7 @@ export const Searched = () => {
   return (
     <Grid>
       {searched.map((searchTerm) => (
-        <Link to={`/recipe/${recipe.id}`}>
+        <Link to={`/recipe/${searchTerm.id}`}>
           <Card key={searchTerm.id}>
             <img src={searchTerm.image} alt={searchTerm.title} />
             <h4>{searchTerm.title}</h4>

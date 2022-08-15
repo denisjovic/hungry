@@ -3,14 +3,14 @@ import { Categories } from './components/Categories';
 import { Search } from './components/Search';
 import { BrowserRouter, Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { GIKnifeFork } from 'react-icons/gi';
+import { GiKnifeFork } from 'react-icons/gi';
 
 function App() {
   return (
     <BrowserRouter>
       <Nav>
-        <GIKnifeFork />
-        <Logo to={'/'}>Hungry?</Logo>
+        <GiKnifeFork />
+        <Logo to={'/'}> Hungry</Logo>
       </Nav>
       <Search />
       <Categories />
@@ -21,7 +21,7 @@ function App() {
 
 const Logo = styled(Link)`
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
 `;

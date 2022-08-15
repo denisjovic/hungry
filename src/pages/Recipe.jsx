@@ -20,7 +20,7 @@ export const Recipe = () => {
   useEffect(() => fetchDetails(params.recipeId), [params.recipeId]);
 
   return (
-    <Wrapper>
+    <RecipeWrapper>
       <div>
         <h2>{recipe.title}</h2>
         <img src={recipe.image} alt='' />
@@ -52,29 +52,30 @@ export const Recipe = () => {
           </ul>
         )}
       </Info>
-    </Wrapper>
+    </RecipeWrapper>
   );
+};
 
-  const Wrapper = styled.div`
-    margin: 10rem 0 5rem 0;
-    display: flex;
-    .active {
-      background: linear-gradient(35deg, #494949, #313131);
-      color: white;
-    }
-    h2 {
-      margin-bottom: 2rem;
-    }
-    ul {
-      margin-top: 2rem;
-    }
-    li {
-      font-size: 1.2rem;
-      line-height: 2.5rem;
-    }
-  `;
+const RecipeWrapper = styled.div`
+  margin: 10rem 0 5rem 0;
+  display: flex;
+  .active {
+    background: linear-gradient(35deg, #494949, #313131);
+    color: white;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  ul {
+    margin-top: 2rem;
+  }
+  li {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+  }
+`;
 
-  const Button = styled.button`
+const Button = styled.button`
     padding: 1rem 2rem;
     color: #313131;
     background: white;
@@ -83,7 +84,6 @@ export const Recipe = () => {
     font-weight: bold;
   `;
 
-  const Info = styled.div`
-    margin-left: 10rem;
-  `;
-};
+const Info = styled.div`
+  margin-left: 10rem;
+`;
